@@ -29,12 +29,17 @@ button {
   background: none;
 }
 
-/* 暗色模式 (根據 prefers-color-scheme 自動切換) */
+/* 暗色模式 (根據 prefers-color-scheme 或 class 切換) */
 @media (prefers-color-scheme: dark) {
-
   html,
   body {
     background-color: #181818;
     color: #f0f0f0;
   }
+}
+
+html.dark,
+html.dark body {
+  background-color: #181818;
+  color: #f0f0f0;
 }
