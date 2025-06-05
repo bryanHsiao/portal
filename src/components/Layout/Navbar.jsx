@@ -10,9 +10,9 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex items-center h-12 bg-gray-100 border-b">
+    <div className="flex items-center h-12 bg-gray-100 border-b dark:bg-gray-900 dark:border-gray-700">
       {/* 左側 系統名稱 占位 w-64 (與 Sidebar 對齊) */}
-      <div className="w-50 px-7 font-bold text-lg whitespace-nowrap">
+      <div className="w-50 px-7 font-bold text-lg whitespace-nowrap dark:text-gray-300">
         ISO文管系統
       </div>
 
@@ -23,7 +23,11 @@ export default function Navbar() {
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`relative px-2 py-1 text-sm transition
-              ${activeTab === tab.id ? "font-semibold text-blue-600" : "text-gray-700 hover:text-blue-500"}
+              ${
+                activeTab === tab.id
+                  ? "font-semibold text-blue-600"
+                  : "text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              }
             `}
           >
             {tab.label}
